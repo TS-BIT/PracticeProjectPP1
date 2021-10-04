@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  headerFilname = 'bootstrap-logo.svg';
   constructor() { }
 
   ngOnInit(): void {

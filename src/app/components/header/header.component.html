@@ -1,1 +1,38 @@
 <p>header works!</p>
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary color: #e9ecef">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+      <img
+      src="https://getbootstrap.com/docs/5.1/assets/brand/{{ headerFilname }}"
+      alt=""
+      width="30"
+      height="24"
+      class="d-inline-block align-text-top"
+    />
+    My Awesome App
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/home']"><span>Home</span></a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/about']"><span>About</span></a>
+      <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/products']"><span>Products</span></a>
+      <!-- <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['/forms']"><span>Forms</span></a> -->
+    </div>
+  </div>
+</div>
+</nav>
+</div>
+
