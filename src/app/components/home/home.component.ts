@@ -27,6 +27,11 @@ divide(){
   this.num3=this.num1/this.num2;
 }
 
+reset(){
+  this.num3=0;
+}
+
+
   constructor() { }
 
   ngOnInit(): void {
