@@ -11,16 +11,21 @@ import { Product } from './../../models/product';
 })
 export class ProductComponent implements OnInit {
 
-  products: Product[];
-  filteredProducts: Product[];
+product: any;
 
-  constructor(private productService: ProductService) {
-    this.products = this.productService.getProducts();
-    this.filteredProducts = this.products;
-  }
+constructor(
+  private activatedRoute: ActivatedRoute,
+  private productService: ProductService,
+  private router: Router
+) { }
 
-
-  ngOnInit(): void {
-  }
-
+ngOnInit(): void {
+  const id = +this.activatedRoute.snapshot.paramMap.get('id')!;
+  this.product = this.productService.getProduct(id);
 }
+
+onBack(): void {
+  this.router.navigate(['/products']);
+}
+}
+

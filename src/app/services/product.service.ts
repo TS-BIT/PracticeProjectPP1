@@ -21,4 +21,8 @@ getProducts(): Product[] {
   return this.products;
 }
 
+getProduct(id: number): Product {
+  return this.products.filter(p => p.id === id)[0];
+}
+
 }
